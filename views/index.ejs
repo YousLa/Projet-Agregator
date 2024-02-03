@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Assets/styles/style.css">
+    <title>Document</title>
+</head>
+
+<body class="grid">
+
+    <!-- TODO Nettoyer le css -->
+
+    <!-- ! DONE -->
+    <!-- #region Nasa -->
+    <div class="Nasa">
+        <div class="weather-wrapper">
+            <span class="copyright">© <%= nasa.copyright %></span>
+            <div class="weather-card madrid">
+                <img src="<%= nasa.url %>" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- #endregion -->
+
+    <!-- ! DONE -->
+    <!-- #region anime -->
+
+    <div class="anime">
+        <div class="gif-wrapper">
+            <div class="anime-card ">
+                <h2>
+                    <%= anime.anime %>
+                </h2>
+                <p>
+                    <%= anime.character %>
+                </p>
+                <p>
+                    <%= anime.quote %>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+
+    <!-- ! DONE -->
+    <!-- #region Weather -->
+    <div class="meteo">
+        <div class="weather-wrapper">
+            <div class="weather-card">
+                <!-- TODO lier les code d'icone aux images -->
+                <div class="weather-icon"><img class="weather-icon" src="<%= weather.temperatures.icon %>" alt=""></div>
+                <h1>
+                    <%= weather.temperatures.celsius %>
+                </h1>
+                <p>Belgique</p>
+
+            </div>
+        </div>
+    </div>
+<!-- #endregion -->
+
+    <!-- ! DONE -->
+    <!-- #region JeuxVidéo.com -->
+
+    <div class="JVC">
+
+        <div class="jvc-container">
+            <a href='<%= jeuxVideo.news[0].link %>' class="hero-image-container">
+                <img class="hero-image" src="<%= jeuxVideo.news[0].image %>" alt="<%= jeuxVideo.news[0].title %>" />
+            </a>
+            <main class="main-content">
+
+                <h2 class="titre-jvc">
+                    <%= jeuxVideo.news[0].title %>
+                </h2>
+                <p class="description">
+                    <%= jeuxVideo.news[0].description %>
+                </p>
+                <div class="flex-row">
+                    <div class="publish-by">
+                        <!-- <img src="https://i.postimg.cc/T1F1K0bW/Ethereum.png" alt="Ethereum" class="small-image" /> -->
+                        <p>Publié par <%= jeuxVideo.news[0].createur %>
+                        </p>
+                    </div>
+                    <div class="time-left">
+                        <img src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png" alt="clock"
+                            class="small-image" />
+                        <p>Publié le <%= jeuxVideo.news[0].date %>
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <div class="card-attribute">
+                <!-- <img src="https://i.postimg.cc/SQBzNQf1/image-avatar.png" alt="avatar" class="small-avatar" /> -->
+                <p><span><a href="<%= jeuxVideo.news[0].link %>">En savoir plus.</a></span></p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- #endregion -->
+
+    <!-- ! DONE -->
+    <!-- #region Movie -->
+
+    <div class="movie">
+
+        <div class="movie-container">
+            <h1 class="movie-title">
+                    <%= movie.data[0].title %>
+                </h1>
+            
+                <img class="movie-image" src="https://image.tmdb.org/t/p/original<%=movie.data[0].poster_path%>"
+                    alt="Spinning glass cube" />
+            
+            <main class="main-content">
+                <p class="p">
+                    <%= movie.data[0].overview%>
+                </p>
+                <div class="flex-row">
+                    <div class="coin-base">
+                        <h2>
+                        </h2>
+                    </div>
+                    <div class="time-left">
+                        <img src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png" alt="clock"
+                            class="small-image" />
+                        <p>Date de sortie <%= movie.data[0].release_date %>
+                        </p>
+                    </div>
+                </div>
+            </main>
+            <div class="card-attribute">
+                <p><span><a href="<%=  %>"></a></span></p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- #endregion -->
+
+    <!-- ! DONE -->
+    <!-- #region GIF -->
+
+    <div class="gif">
+        <div class="gif-wrapper">
+            <div class="gif-card madrid">
+                <img class="gif-image" src="<%= giphy.item.data.images.original.url %>" alt="Spinning glass cube" />
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+
+    <!-- ! DONE -->
+    <!-- #region Lol -->
+    <div class="idk">
+        <div class="idk-wrapper">
+            <div class="main-content idk-card">
+                <h2 class="titre-jvc pp">
+                    <%= lol.news[0].articles.item[0].title[0]%>
+                </h2>
+                <p class="p description">
+                    <%= lol.news[0].articles.item[0].description[0]%>
+                </p>
+
+                <div class="flex-row">
+                    <div class="publish-by">
+                        <!-- <img src="https://i.postimg.cc/T1F1K0bW/Ethereum.png" alt="Ethereum" class="small-image" /> -->
+                        <p>
+                        </p>
+                    </div>
+                    <div class="time-left">
+                        <img src="https://i.postimg.cc/prpyV4mH/clock-selection-no-bg.png" alt="clock"
+                            class="small-image" />
+                        <p class="pp">Publié le <%= lol.news[0].date%>
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="card-attribute">
+                    <p class="plus"><span><a href="<%= lol.news[0].articles.item[0].link[0] %>">En savoir
+                                plus.</a></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- #endregion -->
+</body>
+
+</html>
